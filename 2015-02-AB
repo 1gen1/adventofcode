@@ -1,0 +1,21 @@
+# AOC 2015-02AB, done 2022-10-30
+# First I found all the instances of 'x' then
+# replaced them with ' '.
+
+sa = 0
+ri = 0
+for _ in range(1001):
+    length, width, height = input("Enter input: ").split()
+    dim_given = [int(length), int(width), int(height)]
+    dim_given.sort()
+    a = dim_given[0]
+    b = dim_given[1]
+    c = dim_given[2]
+    sa_now = 3*a*b + 2*b*c + 2*a*c
+    sa = sa + sa_now
+    ri_now = a + a + b + b + a*b*c
+    ri = ri + ri_now
+    print(sa, ri)
+# Then you manually find out the SA/ribbon of the
+# last package and add that to the total for some reason.
+# Coding is loadHmm.
