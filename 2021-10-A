@@ -1,3 +1,5 @@
+# AOC 2021-10A, done 2021-10-31
+
 string = input("Enter input: ")
 
 bool1 = ("()" in string)
