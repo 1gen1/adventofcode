@@ -1,0 +1,38 @@
+string = input("Enter input: ")
+
+bool1 = ("()" in string)
+bool2 = ("[]" in string)
+bool3 = ("{}" in string)
+bool4 = ("<>" in string)
+bool = (bool1 or bool2 or bool3 or bool4)
+
+for _ in string:
+    if bool == True:
+        string = string.replace("()","")
+        string = string.replace("[]","")
+        string = string.replace("{}","")
+        string = string.replace("<>","")
+print(string)
+
+for _ in range(106):
+    string = input("Enter: ")
+    bool1 = ("()" in string)
+    bool2 = ("[]" in string)
+    bool3 = ("{}" in string)
+    bool4 = ("<>" in string)
+    closer = ""
+    bool = (bool1 or bool2 or bool3 or bool4)
+
+    for _ in string:
+        if bool == True:
+            string = string.replace("()", "")
+            string = string.replace("[]", "")
+            string = string.replace("{}", "")
+            string = string.replace("<>", "")
+        string2 = string.replace("(", "")
+        string2 = string2.replace("[", "")
+        string2 = string2.replace("{", "")
+        string2 = string2.replace("<", "")
+        exists = len(string2)
+    if exists > 0:
+        print(string2[0])
