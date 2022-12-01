@@ -1,0 +1,27 @@
+# AOC 2017-01, done 2022-12-01
+
+string = input("Enter input: ")
+i = 0
+sum = 0
+
+i = 0
+sum = 0
+
+for _ in range(2136):
+   if string[i] == string[i+1]:
+       sum = sum + int(string[i])
+       i = i + 1
+   else:
+       i = i + 1
+print(sum)
+
+i = 0
+sum = 0
+
+for _ in range(1068):
+    if string[i] == string[i+1068]:
+        sum = sum + int(string[i])
+        i = i + 1
+    else:
+        i = i + 1
+print(sum*2)
