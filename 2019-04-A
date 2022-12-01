@@ -1,0 +1,37 @@
+# AOC 2019-04A, done 2021-11-15
+
+i = int(input("Enter lower bound: "))
+j = int(input("Enter upper bound: "))
+valid = 0
+
+while i <= 706948:
+    string = str(i)
+
+    d1 = string[0]
+    d2 = string[1]
+    d3 = string[2]
+    d4 = string[3]
+    d5 = string[4]
+    d6 = string[5]
+
+    adj1 = (int(d1) - int(d2) == 0)
+    adj2 = (int(d2) - int(d3) == 0)
+    adj3 = (int(d3) - int(d4) == 0)
+    adj4 = (int(d4) - int(d5) == 0)
+    adj5 = (int(d5) - int(d6) == 0)
+
+    nd1 = (int(d2) - int(d1) >= 0)
+    nd2 = (int(d3) - int(d2) >= 0)
+    nd3 = (int(d4) - int(d3) >= 0)
+    nd4 = (int(d5) - int(d4) >= 0)
+    nd5 = (int(d6) - int(d5) >= 0)
+
+    adj = (adj1 or adj2 or adj3 or adj4 or adj5)
+    nd = (nd1 and nd2 and nd3 and nd4 and nd5)
+    eligible = adj and nd
+
+    if eligible == True:
+        valid = valid + 1
+
+    i = i + 1
+print(valid)
