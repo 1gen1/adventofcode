@@ -1,0 +1,30 @@
+# AOC 2015-04AB, done 2023-8-31
+
+import hashlib
+
+valid = 0
+i = 1
+string = str(i)
+key = "ckczppom"
+
+while i <= 10000000:
+    testkey = key + string
+    fullhash = hashlib.md5(testkey.encode())
+    hexhash = fullhash.hexdigest()
+    first6 = hexhash[:6]
+    zeroes = "000000"
+
+    if first6 != zeroes:
+        i = i + 1
+
+        string = str(i)
+        key = "ckczppom"
+        testkey = key + string
+        fullhash = hashlib.md5(testkey.encode())
+        hexhash = fullhash.hexdigest()
+        first6 = hexhash[:6]
+        zeroes = "000000"
+    else:
+        valid = valid + 1
+        print(i)
+        break
