@@ -1,0 +1,29 @@
+import math
+stones = [28,4,3179,96938,0,6617406,490,816207]
+blinks = 0
+
+while blinks < 25:
+    
+    newstones = []
+    for stone in stones:
+        
+        newstone = 0
+        
+        if stone == 0:
+            newstones.append(1)
+        
+        elif len(str(stone)) % 2 == 1:
+            newstone = 2024 * int(stone)
+            newstones.append(newstone)
+            
+        else:
+            digits = 1 + math.floor(math.log(stone,10))
+            halflength = digits // 2
+            string = str(stone)
+            newstone = string[0:halflength]
+            newstone2 = string[halflength:]
+            newstones.append(int(newstone))
+            newstones.append(int(newstone2))
+        stones = newstones
+    blinks = blinks + 1
+print(len(stones))
