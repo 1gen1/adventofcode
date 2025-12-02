@@ -1,0 +1,25 @@
+ranges = [10,18,23,48,58,72,73,97,294,400,538,812,149,216,10000,12332,81867,97148,53435,76187,4394592,4512674,3511416,3689352,1007333,1150296,2131524,2335082]
+x = 0
+i = 0 # for index in ranges
+total = 0
+# For IDs of prime length (2, 3, 5, 7)
+for x in range(27):
+    
+    # Define start and end of range
+    start_of_range = ranges[i]
+    end_of_range = ranges[i+1] + 1
+    
+    # Define current ID range
+    
+    current_id_no = start_of_range
+    
+    while current_id_no < end_of_range:
+        current_id = str(current_id_no)
+        
+        if current_id == len(current_id) * current_id[0]:
+            print(str(current_id_no) + " is invalid")
+            total = total + current_id_no
+        
+        current_id_no = current_id_no + 1
+    i = i + 2
+    print(total)
