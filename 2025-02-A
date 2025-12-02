@@ -5,12 +5,11 @@ total = 0
 
 for x in range(67):
     
-    #Define start and end of range
+    # Define start and end of range
     start_of_range = ranges[i]
     end_of_range = ranges[i+1] + 1
     
-    #Define current ID range
-    
+    # Define current ID range
     current_id_no = start_of_range
     
     while current_id_no < end_of_range:
