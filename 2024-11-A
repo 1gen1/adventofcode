@@ -1,5 +1,5 @@
 import math
-stones = [28,4,3179,96938,0,6617406,490,816207]
+stones = [] # Insert input between brackets
 blinks = 0
 
 while blinks < 25:
